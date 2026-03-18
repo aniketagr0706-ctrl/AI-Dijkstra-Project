@@ -62,3 +62,40 @@ Path: Delhi → Mumbai
 
 ## Conclusion
 This project demonstrates the application of Dijkstra’s Algorithm in solving real-world shortest path problems using live data.
+
+## Q2: UGV Path Planning using A* Algorithm
+
+- Implemented grid-based navigation
+- Added obstacle generation with different densities (Low, Medium, High)
+- Used A* algorithm for shortest path finding
+- Avoids obstacles while navigating
+- Measures of Effectiveness:
+  - Path Length
+  - Nodes Explored
+  - Execution Time
+
+  ---
+
+## Q3: Path Planning with Dynamic Obstacles
+
+In real-world environments, obstacles are not always static and may appear or move unpredictably. In such cases, the UGV must dynamically adapt its path.
+
+A simple approach is to use A* algorithm repeatedly. Whenever a new obstacle is detected, the algorithm recomputes the path from the current position to the goal.
+
+However, a more efficient approach is to use dynamic path planning algorithms such as D* (Dynamic A*) and D* Lite. These algorithms are specifically designed for environments where obstacles change over time. Instead of recomputing the entire path, they update only the affected parts of the path, making them faster and more efficient.
+
+The working of the UGV in a dynamic environment is as follows:
+1. Initialize the environment and compute an initial path
+2. Move towards the goal step by step
+3. Continuously sense the environment for new obstacles
+4. If an obstacle is detected, update the map
+5. Recompute or update the path using A* or D*
+6. Continue until the goal is reached
+
+Measures of Effectiveness include:
+- Path length
+- Number of nodes explored
+- Time taken for replanning
+- Number of replanning steps
+
+Thus, dynamic path planning ensures that the UGV can safely and efficiently navigate even in uncertain and changing environments.
